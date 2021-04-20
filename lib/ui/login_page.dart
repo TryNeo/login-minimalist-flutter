@@ -150,8 +150,15 @@ class LoginPage extends StatelessWidget {
       ),
       Text(
         'Or login with',
-        style: TextStyle(fontSize: 18),
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.w300,
+        ),
       ),
+      SizedBox(
+        height: 25,
+      ),
+      this.imagesInferiores(),
     ]);
   }
 
@@ -186,6 +193,22 @@ class LoginPage extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Widget imagesInferiores() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        Container(
+            width: 50.0,
+            height: 50.0,
+            child: Image.network('https://i.imgur.com/mVdliqw.png')),
+        Container(
+            width: 40.0,
+            height: 40.0,
+            child: Image.network('https://i.imgur.com/9rmjqqh.png'))
+      ],
     );
   }
 }
